@@ -1,6 +1,6 @@
 {
-  "name": "@editorjs/marker",
-  "version": "1.2.2",
+  "name": "@getpingback/marker",
+  "version": "1.2.3",
   "keywords": [
     "codex editor",
     "marker",
@@ -10,7 +10,7 @@
   ],
   "description": "Marker Tool for Editor.js",
   "license": "MIT",
-  "repository": "https://github.com/editor-js/marker",
+  "repository": "https://github.com/getpingback/marker",
   "main": "./dist/bundle.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -23,6 +23,10 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/pro-light-svg-icons": "^5.14.0",
+    "@fortawesome/pro-regular-svg-icons": "^5.14.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^1.0.0",
     "raw-loader": "^3.1.0",

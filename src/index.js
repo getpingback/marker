@@ -1,3 +1,7 @@
+import { library, icon } from '@fortawesome/fontawesome-svg-core';
+import { faHighlighter } from '@fortawesome/pro-light-svg-icons';
+library.add(faHighlighter);
+
 /**
  * Build styles
  */
@@ -65,7 +69,11 @@ class Marker {
     this.button = document.createElement('button');
     this.button.type = 'button';
     this.button.classList.add(this.iconClasses.base);
-    this.button.innerHTML = this.toolboxIcon;
+
+    const elementIcon = document.createElement('svg');
+    elementIcon.innerHTML = icon({ prefix: 'fal', iconName: 'highlighter' }, { transform: { size: 23 } }).html[0];
+
+    this.button.appendChild(elementIcon);
 
     return this.button;
   }
@@ -160,14 +168,6 @@ class Marker {
     const termTag = this.api.selection.findParentTag(this.tag, Marker.CSS);
 
     this.button.classList.toggle(this.iconClasses.active, !!termTag);
-  }
-
-  /**
-   * Get Tool icon's SVG
-   * @return {string}
-   */
-  get toolboxIcon() {
-    return require('./../assets/icon.svg').default;
   }
 
   /**
